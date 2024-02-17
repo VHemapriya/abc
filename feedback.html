@@ -1,0 +1,123 @@
+<html>    
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<style>    
+.button {
+    border-radius: 20%;
+    border: 2px solid white;
+    color: black;
+    padding: 13px 10px;
+    font-size: 40px;
+    transition-duration: 0.4s;
+  }
+  .open-button {
+    color:black;
+    cursor: pointer;
+ }
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 90;
+    right: 780px;
+    border: 3px solid black;
+}
+  .form-container {
+    font-size: 25px;
+    max-width: 450px;
+    padding: 20px;
+    background-color: lightcyan;
+  }
+  .form-container input[type=text]{
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container input[type=number]{
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .form-container input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  textarea{
+   width: 450px;
+   font-size: 20px;
+   background-color: #f1f1f1;
+   border: none;
+  }
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 20px;
+    padding: 18px 20px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    
+  }
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  p{
+    
+    text-align: center;
+    font-size: 40px;
+  }
+  h1{
+    text-align: center;
+  }
+  .paragraph{
+    margin: 5px 300px;
+}
+</style> 
+</head>     
+<body style="background-color: rgb(236, 68, 90);">   
+<div class="form-popup" id="myForm">
+  <form action="https://formsubmit.co/el/tabiwu" method="POST" class="form-container">
+    <h1>Feedback</h1>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="phno"><b>Phone No</b></label>
+    <input type="number" placeholder="Enter PhoneNo" name="phno" required>
+
+    <label for="feedback"><b>Message</b></label>
+    <div class="col-75">    
+      <textarea id="message" name="Enter your message" placeholder="Enter your message.." style="height:100px" ></textarea>    
+    </div> 
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+ 
+  </script>
+     
+</body>
+</html>    

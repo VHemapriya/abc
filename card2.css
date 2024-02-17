@@ -1,0 +1,53 @@
+
+
+* {
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.card-main-container{
+    justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   display: flex;
+}
+.card-main {
+   position: relative;
+   transform-style: preserve-3d;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   transition: all .4s ease;
+   margin: 1rem;
+}
+.card-main:hover {
+   transform: rotateY(180deg);
+}
+.front-card {
+   position: absolute;
+   backface-visibility: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 5px;
+}
+.back-card {
+   position: absolute;
+   backface-visibility: hidden;
+   transform: rotateY(180deg);
+   background-color:white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color:white;
+}
+.btn {
+   margin-top: 1px;
+}
+.back-light {
+   color:white;
+}
